@@ -1,0 +1,43 @@
+{% extends 'base2.html' %}
+{% block content %}
+{% for post in posts %}
+ <div class="container mt-4">
+   <div class="row">
+     <div class="col-md-3">
+       <!-- изображение поста -->
+       <img src="/static/images/test3.png" alt="Изображение поста" class="img-fluid">
+     </div>
+     <div class="col-md-9">
+       <div class="card">
+         <div class="card-body">
+           <!-- заголовок поста -->
+           <p><a href="http://127.0.0.1:5000/profile/{{post.author_id}}">{{ post.author.name }}</a></p>
+           <h5 class="card-title">authors` ID : <a href='http://127.0.0.1:5000/{{post.id}}'>{{post.author}}</a></h5>
+           <!-- описание поста -->
+           <p class="card-text"><a href='http://127.0.0.1:5000/{{post.id}}'>{{post.title}}</a></p>
+           <!-- номер телефона -->
+           <p class="text-muted">{{post.phone_number}}</p>
+           <!-- кнопка "Like" -->
+           <span>{{post.date}}</span>
+           <button class="like"></button>
+           <a class="read_more" href="http://127.0.0.1:5000/{{post.id}}">Read More</a>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ <!-- подключение Bootstrap JS -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <!-- подключение нашего JS -->
+ <script src="/static/js/script.js"></script>
+ <script>
+   const likeBtn = document.querySelector('.like-btn');
+
+   likeBtn.addEventListener('click', () => {
+      likeBtn.classList.toggle('clicked');
+   });
+</script>
+{%endfor%}
+{% endblock %}

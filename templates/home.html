@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Post</title>
+	<style>
+		.like-btn {
+			background-color: grey;
+			color: white;
+			padding: 5px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		.like-btn.clicked {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>My Post</h1>
+	<p>This is my awesome post. Do you like it?</p>
+	<button class="like-btn">Like</button>
+	<p>Comments:</p>
+	<ul id="comments">
+		<li>Great post!</li>
+		<li>Thanks for sharing.</li>
+	</ul>
+
+	<script>
+		const likeBtn = document.querySelector('.like-btn');
+		const commentsList = document.querySelector('#comments');
+
+		likeBtn.addEventListener('click', () => {
+			likeBtn.classList.toggle('clicked');
+		});
+	</script>
+</body>
+</html>

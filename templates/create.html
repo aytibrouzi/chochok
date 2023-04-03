@@ -1,0 +1,76 @@
+{%extends 'base2.html'%}
+{%block content%}
+<style>
+    .containerer {
+        margin: 0 auto;
+        max-width: 500px;
+        padding: 20px;
+        background-image: url('https://rare-gallery.com/uploads/posts/1194277-abstract-trippy-psychedelic-green.jpg');
+        width: 100%;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+        border: none;
+        width: 100%;
+        font-size: 16px;
+    }
+
+		button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			transition: transform 0.5s ease;
+		}
+
+		button:hover {
+			background-color: #00BFFF;
+			animation: rainbow 5s linear infinite;
+		}
+
+		@keyframes rainbow {
+			0% {
+				background-color: #FF0000; /* красный */
+			}
+			16% {
+				background-color: #FF7F00; /* оранжевый */
+			}
+			32% {
+				background-color: #FFFF00; /* желтый */
+			}
+			48% {
+				background-color: #00FF00; /* зеленый */
+			}
+			64% {
+				background-color: #0000FF; /* синий */
+			}
+			80% {
+				background-color: #8B00FF; /* фиолетовый */
+			}
+			100% {
+				background-color: #FF0000; /* красный */
+			}
+		}
+</style>
+<body>
+        <form method="post" >
+        <div class="containerer">
+            <form>
+                <input type="text" name="title" placeholder="Title">
+                <input type="text" name="description" placeholder="Description">
+                <input type="text" name="phone_number" placeholder="Phone Number">
+                <button type="submit">Create</button>
+            </form>
+        </div>
+    </form>
+</body>
+{%endblock%}

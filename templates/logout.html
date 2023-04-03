@@ -1,0 +1,78 @@
+{%extends 'base2.html'%}
+{%block content%}
+<style>body {
+    background-image: #f1f1f1;
+    font-family: Arial, sans-serif;
+  }
+  
+  .login-container {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 20px;
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1ea5deaa-816d-4afc-a955-3f9df5e7f31e/de86sue-e7ca0311-28d2-48e1-8684-d0857c80eaa8.jpg/v1/fill/w_1920,h_1280,q_75,strp/fire_digital_art_by_maygoldworthy_de86sue-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzFlYTVkZWFhLTgxNmQtNGFmYy1hOTU1LTNmOWRmNWU3ZjMxZVwvZGU4NnN1ZS1lN2NhMDMxMS0yOGQyLTQ4ZTEtODY4NC1kMDg1N2M4MGVhYTguanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.cCOWwty8uk4kdDIgKHykJ2hOKF7RLXOE7p6rcl1kyVA');
+    width: 100%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: White;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  label {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    width: 100%;
+  }
+  
+  button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    background-color: #da0b0b;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #da0b0b;
+  }</style>
+<body>
+<div class="login-container">
+    <h1>Logout</h1>
+    <form  method="POST" action="/logout">
+    <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+    </div>
+    <button type="submit">Logout</button>
+    </form>
+</div>
+</body>
+{%endblock%}
